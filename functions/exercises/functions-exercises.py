@@ -14,6 +14,7 @@ print(makeLine(lineLength))
 
 # Part 1 B -- Make a Square5
 # create a function using your make_line function to code a square
+
 chosenSquare = int(input("Choose the size of the square: "))
 def makeSquare(squareSize):
     zeroStart = 0
@@ -27,6 +28,7 @@ def makeSquare(squareSize):
 print(makeSquare(chosenSquare))
 
 # Part 1 C -- Make a Rectangle
+
 chosenRectWidth = int(input("Choose rectangle width: "))
 chosenRectHeight = int(input("Choose rectangle height: "))
 def makeRectangle(rectLength, rectHeight):    
@@ -41,8 +43,8 @@ def makeRectangle(rectLength, rectHeight):
 print(makeRectangle(chosenRectWidth, chosenRectHeight))
 
 
-
 # Part 2 A -- Make a Stairs
+
 downStairBottomWidth = int(input("Choose the length of the flight of stairs: "))
 def makeDownwardStairs(bottomWidth):
     stairString = ''
@@ -58,10 +60,10 @@ print(makeDownwardStairs(downStairBottomWidth))
 # Part 2 B -- Make Space-Line 
 
 def makeEmptyLine(lineSize):
-    p = ''
+    empty = ''
     for i in range(lineSize):
-        p += " "
-    return p
+        empty += " "
+    return empty
 
 chosenSpaces = int(input("Choose the number of spaces before and after the characters: "))
 chosenChars = int(input("Choose the amount of characters: "))
@@ -99,6 +101,7 @@ print(makeIsosceles(chosenIsoscelesSize))
 
 
 # Part 3 -- Make a Diamond
+
 chosenDiamondSize = int(input("Choose the width of the diamond: "))
 
 def makeDiamond(diamondSize):
@@ -115,11 +118,11 @@ def makeDiamond(diamondSize):
         diamondString += makeLine(i) + "\n"
         i -= 2
         diamondSpace += 1
-        while i > 0:
+        while i > 2:
             diamondString += makeSpaceLine(diamondSpace, i) + "\n"
             i -= 2
             diamondSpace += 1
-
+        diamondString += makeSpaceLine(diamondSpace, i)
     return diamondString
 
 print(makeDiamond(chosenDiamondSize))
