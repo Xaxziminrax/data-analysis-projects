@@ -1,0 +1,6 @@
+# Ignore the csv file as it is larger than the file limit
+.DS_Store
+/.DS_Store
+data/raw/
+data/processed/
+*.csv
